@@ -14,6 +14,8 @@ SPARSE_VECTOR_NAME = "sparse"
 # --- Model Configuration ---
 DENSE_MODEL = "sentence-transformers/all-mpnet-base-v2"
 SPARSE_MODEL = "Qdrant/bm25"
+LLM_MODEL = "qwen3:4b-instruct-2507-q4_K_M"
+LLM_TEMPERATURE = 0
 
 # --- Agent Configuration ---
 # --- Text Splitter Configuration ---

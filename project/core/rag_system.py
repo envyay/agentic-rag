@@ -5,6 +5,7 @@ from langchain_community.chat_models import ChatOllama
 from project import config
 from project.db.parent_store_manager import ParentStoreManager
 from project.db.vector_db_manager import VectorDbManager
+from project.document_chunker import DocumentChuncker
 
 
 class RAGSystem:
@@ -13,7 +14,7 @@ class RAGSystem:
         self.collection_name = collection_name
         self.vector_db = VectorDbManager()
         self.parent_store = ParentStoreManager()
-        self.chunker = DocumentChunker()
+        self.chunker = DocumentChuncker()
         self.agent_graph = None
         self.thread_id = str(uuid.uuid4())
         self.recursion_limit = 50
